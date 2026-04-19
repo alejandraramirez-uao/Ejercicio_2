@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+# Parte B — Colas
+from collections import deque
+import heapq
+
+# TODO 3: Simulación de turnos con cola
+def simulacion_turnos(clientes):
+    # clientes: lista con nombres o números de clientes
+    # TODO: encolar y desencolar con deque
+    pass
+
+# TODO 4: Cola de prioridad de tareas con heapq
+def cola_prioridad(tareas):
+    # tareas: lista de tuplas (prioridad, tarea)
+    # TODO: usar heapq para atender en orden de prioridad
+    pass
+
+if __name__ == "__main__":
+    print("== Colas ==")
+    print("Simulación de turnos:")
+    simulacion_turnos(["Cliente1", "Cliente2", "Cliente3"])
+
+    print("\nCola de prioridad:")
+    cola_prioridad([(2,"tarea media"), (1,"tarea alta"), (3,"tarea baja")])

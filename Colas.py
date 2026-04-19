@@ -5,15 +5,29 @@ import heapq
 
 # TODO 3: Simulación de turnos con cola
 def simulacion_turnos(clientes):
-    # clientes: lista con nombres o números de clientes
-    # TODO: encolar y desencolar con deque
-    pass
+    cola = deque()
+
+    # encolar
+    for cliente in clientes:
+        cola.append(cliente)
+
+    # desencolar
+    while cola:
+        cliente = cola.popleft()
+        print("Atendiendo a:", cliente)
 
 # TODO 4: Cola de prioridad de tareas con heapq
 def cola_prioridad(tareas):
-    # tareas: lista de tuplas (prioridad, tarea)
-    # TODO: usar heapq para atender en orden de prioridad
-    pass
+    heap = []
+
+    # encolar con prioridad
+    for tarea in tareas:
+        heapq.heappush(heap, tarea)
+
+    # desencolar por prioridad
+    while heap:
+        prioridad, nombre = heapq.heappop(heap)
+        print("Atendiendo tarea:", nombre, "prioridad", prioridad)
 
 if __name__ == "__main__":
     print("== Colas ==")
